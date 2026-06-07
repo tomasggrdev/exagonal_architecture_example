@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: redis
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/users_db
+    username: postgres
+    password: postgres
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 1000ms
+
+  cache:
+    type: redis
+    redis:
+      time-to-leave: 10000
+      cache-null-values: false
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
